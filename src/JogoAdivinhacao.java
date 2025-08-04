@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class JogoAdivinhacao {
     public static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);
-        int numeroGerado = new Random().nextInt(101); // de 0 a 100 inclusive
+        int numeroGerado = new Random().nextInt(101);
         int tentativas = 0;
         int numeroDigitado = 0;
 
@@ -14,7 +14,7 @@ public class JogoAdivinhacao {
 
             if (numeroDigitado < 0 || numeroDigitado > 100) {
                 System.out.println("Número inválido. Digite um número entre 0 e 100.");
-                continue; // não conta como tentativa
+                continue;
             }
 
             tentativas++;
@@ -22,7 +22,7 @@ public class JogoAdivinhacao {
             if (numeroDigitado == numeroGerado) {
                 System.out.println("Parabéns, você acertou o número em " + tentativas + " tentativas!");
                 break;
-            } else if (numeroDigitado < numeroGerado) {
+            } else if (numeroDigitado > numeroGerado) {
                 System.out.println("O número digitado é maior que o número gerado.");
             } else {
 
