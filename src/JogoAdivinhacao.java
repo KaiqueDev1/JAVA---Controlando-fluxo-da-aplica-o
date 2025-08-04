@@ -29,11 +29,9 @@ public class JogoAdivinhacao {
                 System.out.println("O número digitado é menor que o número gerado.");
             }
         }
-
         if (tentativas == 5 && numeroDigitado != numeroGerado) {
             System.out.println("Você não conseguiu acertar o número em 5 tentativas. O número era: " + numeroGerado);
         }
-
         leitor.close();
     }
 }
